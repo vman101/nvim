@@ -12,9 +12,12 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Bundle 'ervandew/supertab'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'tpope/vim-surround'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
+Plugin 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plugin 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
@@ -152,3 +155,8 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<CR>"
 let g:UltiSnipsJumpForwardTrigger = "<left>"
 let g:UltiSnipsJumpBackwardTrigger = "<right>"
+
+" Enable Treesitter
+set background=dark
+syntax enable
+let g:vim_tree_sitter_highlight_enabled = 1
